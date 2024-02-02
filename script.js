@@ -11,6 +11,6 @@ function calculateDiscount(price, category) {
     return discount
 }
 
-calculateDiscount(10, 'electronics')
-calculateDiscount(10, 'food')
+calculateDiscount(10, 'electronics');
+calculateDiscount(10, 'food');
 
