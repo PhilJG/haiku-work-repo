@@ -19,8 +19,7 @@
     return  house.livingRoom.windows + house.bedroom.windows + house.kitchen.windows
 
   }
-
-  countWindows(
+console.log(countWindows(
     {
         'livingRoom':{
             'windows':4},
@@ -30,4 +29,6 @@
             'windows':1}
         }
             )
+  );
+
   // expected: 7
