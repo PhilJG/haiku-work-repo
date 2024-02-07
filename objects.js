@@ -80,38 +80,87 @@
 // Within this object, there are two properties array1 and array2, each containing an array of numbers.
 // The function should calculate the sum of all positive numbers from both arrays combined and return the total sum.
 
-function sumPositiveNumbers(obj) {
-    let total = 0
+// function sumPositiveNumbers(obj) {
+//     let total = 0
 
-    function positiveValue(num){
-        if(num >= 0) {
-          return num
-        }
-        return 0
+//     function positiveValue(num){
+//         if(num >= 0) {
+//           return num
+//         }
+//         return 0
+//      }
+
+//         for (let el of obj.array1) {
+//           total = total + positiveValue(el)
+//         }
+    
+//         for (let el of obj.array2) {
+//             total = total + positiveValue(el)       
+//         }
+
+//     return total
+// }
+
+
+// let a = {
+//     array1: [1, -3, 5, 7],
+//     array2: [10, -2, 4, -5, 0]
+// }
+// console.log(
+//     sumPositiveNumbers(a) // 27
+// );
+
+
+// let b = {
+//     array1: [10, 20, -9],
+//     array2: [200, 1, 0]
+// }
+// console.log(
+//     sumPositiveNumbers(b) // 241
+// );
+
+
+// Player Names with Even Scores
+// Your task is to create a function named getEvenScorePlayers.
+// This function should take an array of objects as its parameter.
+// Each object represents a player with two properties: name (a string) and score (a number or a string).
+// The function should select the players whose scores are even numbers (and specifically not strings), concatenate their names into a single string with spaces, and return this string.
+
+function getEvenScorePlayers(arr){
+    
+    function setLength(obj){
+        let l = 0
+        for (let el of obj) {
+            l++
+        }        
+        return l
     }
 
-    for (let el of obj.array1) {
-      total = total + positiveValue(el)
+    let result = ' '
+    let length = setLength(arr)
+    
+    for (let i = 0; i <= length - 1; i++) {
+        
+        let player = arr[i]
+        // console.log(typeof player);
+        
+        // let isOdd = player.score % 2
+        // console.log();
+        
+       result = result + player.name + ' '
+        // console.log(result);
+        // if (isOdd === 0) {
+        
+        //    return result
+        // } 
+        // return 
     }
-
-    for (let el of obj.array2) {
-        total = total + positiveValue(el)       
-    }
-
-    return total
+    console.log('result:', result);
+    
 }
 
-let a = {
-    array1: [1, -3, 5, 7],
-    array2: [10, -2, 4, -5]
-}
-console.log(
-    sumPositiveNumbers(a) // 27
-);
+let players1 = [{"name": "Alice", "score": 20}, {"name": "Bob", "score": 15}, {"name": "Charlie", "score": 30}, {"name": "Daisy", "score": "40"}]
+getEvenScorePlayers(players1) // 'Alice Charlie'
 
-
-let b = {
-    array1: [10, 20, -9],
-    array2: [200, 1]
-}
-sumPositiveNumbers(b) // 241
+// let players2 = [{"name": "Tom", "score": "8"}, {"name": "Tim", "score": 9}, {"name": "Tam", "score": 2}]
+// getEvenScorePlayers(players2) // 'Tam'
