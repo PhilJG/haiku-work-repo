@@ -97,15 +97,50 @@
 // This function should take two parameters: an array of objects and an array of numbers of equal length.
 // The function should add the numbers in the second array to the objects as age, following the corresponding index, and return the updated array of objects.
 
-function addAges(objs, nums) {
-    let counter = 0
-    for (let obj of objs) {
-        obj.age = nums[counter]
-        counter++
-    }
-    console.log(obj);
+// function addAges(objs, nums) {
+//     let counter = 0
+//     for (let obj of objs) {
+//         obj.age = nums[counter]
+//         counter++
+//     }
+//     console.log(objs);
     
-    return obj
+//     return objs
+// }
+
+// addAges([{'name':'Tom'},{'name':'Tim'},{'name':'Tam'}],[30,31,32])
+
+// //////////////////////////////
+// Format the Data
+// /////////////////////////////
+
+// Create a function formatData that receives an array of products from a database.
+// Unfortunately, the data is corrupt, some of the objects in the array have a price field of type number but others are strings.
+// Some of the products have an inStock field of type boolean, others are the string 'yes' or 'no' and others don't have the field at all.
+// The functions should:
+// convert all products prices to numbers
+// convert all products inStock property to booleans ('yes' -> true, 'no' -> false) and add a default true if the property doesn't exist
+
+function formatData(objs) {
+    for (let obj of objs ) {
+        
+        if (typeof obj.price === 'string'){
+            obj.price = Number(obj.price) 
+        }
+        if (obj.inStock === 'yes' || obj.inStock === undefined) {
+            obj.inStock = true
+        } else if (obj.inStock === 'no') {
+            obj.inStock = false
+        }
+        
+    }
+    
+    console.log(objs);
+    return objs
 }
 
-addAges([{'name':'Tom'},{'name':'Tim'},{'name':'Tam'}],[30,31,32])
+// then return the updated and properly formatted array
+
+formatData([{'name':'shoes','price':10,'inStock':true},{'name':'skirt','price':'50','inStock':'yes'}])	
+formatData([{'name':'jacket','price':'90.5','inStock':'no'}])	
+formatData([{'name':'keyboard','price':22.35}])	
