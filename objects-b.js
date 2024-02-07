@@ -59,17 +59,25 @@
 
 // Write a function named reducePrices.
 // The function takes an array of objects as a parameter. Each object represents a product with a price property.
-function reducePrices(arr) {
-    for (let el of arr) {
-        let newPrice = el.price
-        el.price = newPrice * .9
-    }
-    return arr  
-}
+// function reducePrices(arr) {
+//     for (let el of arr) {
+//         let newPrice = el.price
+//         el.price = newPrice * .9
+//     }
+//     return arr  
+// }
 
-// The task is to reduce the price property of each product by 10%.
-// Return the array with the updated product objects.
+// // The task is to reduce the price property of each product by 10%.
+// // Return the array with the updated product objects.
 
 
-reducePrices([{'name':'Laptop','price':1000},{'name':'Phone','price':500}])
-reducePrices([{'name':'Camera','price':800},{'name':'Headphones','price':200}])
+// reducePrices([{'name':'Laptop','price':1000},{'name':'Phone','price':500}])
+// reducePrices([{'name':'Camera','price':800},{'name':'Headphones','price':200}])
+
+
+// ///////////////////////////
+// Add Age
+// ////////////////////////////
+// Your task is to create a JavaScript function named addAge.
+// This function should take two parameters: an object and a number.
+// The function should add the provided number to the object as age and return the updated object.
