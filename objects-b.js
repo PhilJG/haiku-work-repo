@@ -121,26 +121,39 @@
 // convert all products prices to numbers
 // convert all products inStock property to booleans ('yes' -> true, 'no' -> false) and add a default true if the property doesn't exist
 
-function formatData(objs) {
-    for (let obj of objs ) {
+// function formatData(objs) {
+//     for (let obj of objs ) {
         
-        if (typeof obj.price === 'string'){
-            obj.price = Number(obj.price) 
-        }
-        if (obj.inStock === 'yes' || obj.inStock === undefined) {
-            obj.inStock = true
-        } else if (obj.inStock === 'no') {
-            obj.inStock = false
-        }
-        
-    }
-    
-    console.log(objs);
-    return objs
+//         if (typeof obj.price === 'string'){
+//             obj.price = Number(obj.price) 
+//         }
+//         if (obj.inStock === 'yes' || obj.inStock === undefined) {
+//             obj.inStock = true
+//         } else if (obj.inStock === 'no') {
+//             obj.inStock = false
+//         }
+
+//     }
+
+//     return objs
+// }
+
+// // then return the updated and properly formatted array
+
+// formatData([{'name':'shoes','price':10,'inStock':true},{'name':'skirt','price':'50','inStock':'yes'}])	
+// formatData([{'name':'jacket','price':'90.5','inStock':'no'}])	
+// formatData([{'name':'keyboard','price':22.35}])	
+
+// /////////////////////////////////////
+// Delete User Password
+// ////////////////////////////////////
+
+// A query has been made to a database and a user object was returned, including the password property, which should not be shared for security reasons.
+// Create a function removePassword that takes a user in the format of an object, deletes the password from the user, then returns the user with all its fields but not the password.
+
+function removePassword(user) {
+    delete user.password    
+    return user
 }
 
-// then return the updated and properly formatted array
-
-formatData([{'name':'shoes','price':10,'inStock':true},{'name':'skirt','price':'50','inStock':'yes'}])	
-formatData([{'name':'jacket','price':'90.5','inStock':'no'}])	
-formatData([{'name':'keyboard','price':22.35}])	
+removePassword({'name':'Jack','age':45,'password':'777888'})	
