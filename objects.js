@@ -128,7 +128,7 @@
 
 function getEvenScorePlayers(arr){
     
-    function setLength(obj){
+    function getLength(obj){
         let l = 0
         for (let el of obj) {
             l++
@@ -136,31 +136,29 @@ function getEvenScorePlayers(arr){
         return l
     }
 
-    let result = ' '
-    let length = setLength(arr)
+    let result = ''
+    let length = getLength(arr)
     
     for (let i = 0; i <= length - 1; i++) {
         
         let player = arr[i]
-        // console.log(typeof player);
         
-        // let isOdd = player.score % 2
-        // console.log();
-        
-       result = result + player.name + ' '
-        // console.log(result);
-        // if (isOdd === 0) {
-        
-        //    return result
-        // } 
-        // return 
+        let isEven = (player.score % 2) === 0
+   
+
+        if(typeof player.score !== 'string' && isEven){
+            result =  result + player.name + ' '
+        } 
+
+   
     }
     console.log('result:', result);
+    return result
     
 }
 
 let players1 = [{"name": "Alice", "score": 20}, {"name": "Bob", "score": 15}, {"name": "Charlie", "score": 30}, {"name": "Daisy", "score": "40"}]
 getEvenScorePlayers(players1) // 'Alice Charlie'
 
-// let players2 = [{"name": "Tom", "score": "8"}, {"name": "Tim", "score": 9}, {"name": "Tam", "score": 2}]
-// getEvenScorePlayers(players2) // 'Tam'
+let players2 = [{"name": "Tom", "score": "8"}, {"name": "Tim", "score": 9}, {"name": "Tam", "score": 2}]
+getEvenScorePlayers(players2) // 'Tam'
