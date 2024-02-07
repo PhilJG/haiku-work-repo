@@ -194,12 +194,30 @@
 // Create an object greeter and add a method sayHello to it.
 // The method should return 'Hello World'
 
+// const greeter = {
+//     sayHello: function(){
+//         return 'Hello World'
+//     }
+// }
+
+// greeter.sayHello() // 'Hello World'
+
+//////////////////////
+// Greet by name
+/////////////////////
+
+// Create an object greeter.
+// In the object, create a method sayHello that takes a parameter, then returns a string as per the tests below.
+
 const greeter = {
-    sayHello: function(){
-        console.log('Hello World');
-        
-        return 'Hello World'
+    sayHello: function(name){
+        if (!name) {
+            return 'Hello guest'
+        }        
+        return 'Hello ' + name
     }
 }
 
-greeter.sayHello() // 'Hello World'
+greeter.sayHello('John') // 'Hello John'
+greeter.sayHello('Alice') // 'Hello Alice'
+greeter.sayHello() // 'Hello guest'
