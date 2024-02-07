@@ -143,16 +143,16 @@ function getEvenScorePlayers(arr){
         
         let player = arr[i]
         
+        // set isEven to boolean
         let isEven = (player.score % 2) === 0
    
-
         if(typeof player.score !== 'string' && isEven){
             result =  result + player.name + ' '
         } 
 
    
     }
-    console.log('result:', result);
+ 
     return result
     
 }
