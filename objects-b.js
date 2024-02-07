@@ -244,3 +244,54 @@
 // counter.increase({ count: 10 }) // { count: 11 }
 // counter.decrease({ count: 1 }) // { count: 0 }
 // counter.decrease({ count: 10 }) // { count: 9 }
+
+/////////////////////////////
+// Nutrition
+////////////////////////////
+
+// In this kata, you're going to create a mini JS library that is useful to calculate a number of values related to nutrition.
+
+// Create an object named nutrition
+// Within the object, create the following methods. For each method you have the formula that should be used to calculate the result.
+
+const nutrition = {
+    calculateCaloriesFromMacros: function(protein, carbs, fat){
+        let calories = (protein * 4) + (carbs * 4) + (fat * 9)
+        console.log('calories ', calories);
+        return calories
+    },
+
+    calculateBMI: function(weight, height){
+        let bmi = weight / (height * height) * 10000
+        console.log('bmi ', bmi);
+    },
+
+    calculateBMR: function(weight, height, age, gender){
+        let bmr
+        if(gender === 'male'){
+            bmr = 10 * weight + 6.25 * height - 5 * age + 5
+        } else if (gender === 'female'){
+            bmr = 10 * weight + 6.25 * height - 5 * age - 161
+        }
+        console.log('bmr ', gender, bmr);
+    },
+    calculateWaterIntake: function(weight){
+        let waterIntake = weight * 0.033
+        console.log(waterIntake);
+    }
+}
+
+
+
+
+
+// Tests
+
+nutrition.calculateCaloriesFromMacros(150, 100, 50) // 1450
+nutrition.calculateCaloriesFromMacros(100, 120, 30) // 1150
+nutrition.calculateBMI(80, 180) // ~24.69
+nutrition.calculateBMI(65, 155) // ~27.05
+nutrition.calculateBMR(80, 180, 35, 'male') // 1755
+nutrition.calculateBMR(60, 170, 26, 'female') // 1371.5
+nutrition.calculateWaterIntake(80) // 2.64
+nutrition.calculateWaterIntake(55) // ~1.81
