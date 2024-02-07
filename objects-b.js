@@ -64,8 +64,7 @@ function reducePrices(arr) {
         let newPrice = el.price
         el.price = newPrice * .9
     }
-return arr
-    
+    return arr  
 }
 
 // The task is to reduce the price property of each product by 10%.
