@@ -39,16 +39,38 @@
 // a number
 // and a string.
 
-function updateNestedArray(obj, num, stg) {
-    obj.fruits[num] = stg
-    return obj
+// function updateNestedArray(obj, num, stg) {
+//     obj.fruits[num] = stg
+//     return obj
+// }
+
+
+// // The object contains a nested array of strings. The function should update the element in the array at the index specified by the number parameter to the value provided by the string parameter.
+
+// // After updating, the function should return the modified object.
+// let a = {"fruits": ["apple", "banana"]}
+// updateNestedArray(a, 1, "cherry") // {"fruits": ["apple", "cherry"]}
+// let b = {"fruits": ["pineapple", "strawberry"]}
+// updateNestedArray(b, 0, "kiwi") // {"fruits": ["kiwi", "strawberry"]}
+
+////////////////////////////////
+// Reducing Product Prices by 10%
+///////////////////////////////
+
+// Write a function named reducePrices.
+// The function takes an array of objects as a parameter. Each object represents a product with a price property.
+function reducePrices(arr) {
+    for (let el of arr) {
+        let newPrice = el.price
+        el.price = newPrice * .9
+    }
+return arr
+    
 }
 
+// The task is to reduce the price property of each product by 10%.
+// Return the array with the updated product objects.
 
-// The object contains a nested array of strings. The function should update the element in the array at the index specified by the number parameter to the value provided by the string parameter.
 
-// After updating, the function should return the modified object.
-let a = {"fruits": ["apple", "banana"]}
-updateNestedArray(a, 1, "cherry") // {"fruits": ["apple", "cherry"]}
-let b = {"fruits": ["pineapple", "strawberry"]}
-updateNestedArray(b, 0, "kiwi") // {"fruits": ["kiwi", "strawberry"]}
+reducePrices([{'name':'Laptop','price':1000},{'name':'Phone','price':500}])
+reducePrices([{'name':'Camera','price':800},{'name':'Headphones','price':200}])
