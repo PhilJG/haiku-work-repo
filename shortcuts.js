@@ -114,5 +114,17 @@
 // console.log(divide(10,2));
 // console.log(divide(18,3));
 
+const checkPositive = (n) => {
+    return n >= 0 ? true : false
+}
+
+console.log(
+    checkPositive(20)	// true
+);
+
+console.log(
+
+    checkPositive(-5)	// false
+);
 
 
