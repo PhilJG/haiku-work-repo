@@ -44,3 +44,17 @@
 // // test	expected
 // addTen(5)	//15
 // addTen(10)	//20
+
+/////////////////
+// If to Ternary
+/////////////////
+
+// In the following function, convert the if condition into a ternary operator.
+
+// function numerToBoolean(n) {
+//     return n > 0 ? true : false
+// }
+
+// // test	expected
+// numerToBoolean(5)	// true
+// numerToBoolean(-30)	// false
