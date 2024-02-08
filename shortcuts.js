@@ -20,11 +20,27 @@
 // This function should take a single parameter, a number, and use the decrement operator to decrease the value of the number by one.
 // The function should then return the decremented value.
 
-function decrementValue(number) {
-    number--
-    console.log(number);
-    return number
+// function decrementValue(number) {
+//     number--
+//     console.log(number);
+//     return number
+// }
+
+// decrementValue(5)	// 4
+// decrementValue(100)	// 99
+
+/////////////////////
+// Addition Assignment
+/////////////////////
+// Replace the sum calculation in the following code with the Addition Assignment operator.
+// Don't delete the variable c.
+
+function addTen(a) {
+    let c = 10
+    c += a    
+    return c
 }
 
-decrementValue(5)	// 4
-decrementValue(100)	// 99
+// test	expected
+addTen(5)	//15
+addTen(10)	//20
