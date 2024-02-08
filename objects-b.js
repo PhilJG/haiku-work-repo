@@ -254,32 +254,31 @@
 // Create an object named nutrition
 // Within the object, create the following methods. For each method you have the formula that should be used to calculate the result.
 
-const nutrition = {
-    calculateCaloriesFromMacros: function(protein, carbs, fat){
-        let calories = (protein * 4) + (carbs * 4) + (fat * 9)
-        console.log('calories ', calories);
-        return calories
-    },
+// const nutrition = {
+//     calculateCaloriesFromMacros: function(protein, carbs, fat){
+//         let calories = (protein * 4) + (carbs * 4) + (fat * 9)
+//         return calories
+//     },
 
-    calculateBMI: function(weight, height){
-        let bmi = weight / (height * height) * 10000
-        console.log('bmi ', bmi);
-    },
+//     calculateBMI: function(weight, height){
+//         let bmi = weight / (height * height) * 10000
+//         return bmi
+//     },
 
-    calculateBMR: function(weight, height, age, gender){
-        let bmr
-        if(gender === 'male'){
-            bmr = 10 * weight + 6.25 * height - 5 * age + 5
-        } else if (gender === 'female'){
-            bmr = 10 * weight + 6.25 * height - 5 * age - 161
-        }
-        console.log('bmr ', gender, bmr);
-    },
-    calculateWaterIntake: function(weight){
-        let waterIntake = weight * 0.033
-        console.log(waterIntake);
-    }
-}
+//     calculateBMR: function(weight, height, age, gender){
+//         let bmr
+//         if(gender === 'male'){
+//             bmr = 10 * weight + 6.25 * height - 5 * age + 5
+//         } else if (gender === 'female'){
+//             bmr = 10 * weight + 6.25 * height - 5 * age - 161
+//         }
+//         return bmr
+//     },
+//     calculateWaterIntake: function(weight){
+//         let waterIntake = weight * 0.033
+//         return waterIntake
+//     }
+// }
 
 
 
@@ -287,11 +286,35 @@ const nutrition = {
 
 // Tests
 
-nutrition.calculateCaloriesFromMacros(150, 100, 50) // 1450
-nutrition.calculateCaloriesFromMacros(100, 120, 30) // 1150
-nutrition.calculateBMI(80, 180) // ~24.69
-nutrition.calculateBMI(65, 155) // ~27.05
-nutrition.calculateBMR(80, 180, 35, 'male') // 1755
-nutrition.calculateBMR(60, 170, 26, 'female') // 1371.5
-nutrition.calculateWaterIntake(80) // 2.64
-nutrition.calculateWaterIntake(55) // ~1.81
+// nutrition.calculateCaloriesFromMacros(150, 100, 50) // 1450
+// nutrition.calculateCaloriesFromMacros(100, 120, 30) // 1150
+// nutrition.calculateBMI(80, 180) // ~24.69
+// nutrition.calculateBMI(65, 155) // ~27.05
+// nutrition.calculateBMR(80, 180, 35, 'male') // 1755
+// nutrition.calculateBMR(60, 170, 26, 'female') // 1371.5
+// nutrition.calculateWaterIntake(80) // 2.64
+// nutrition.calculateWaterIntake(55) // ~1.81
+
+////////////////////////
+// Find the Smallest Number
+// ///////////////////////
+
+// Create a JavaScript function called findSmallestNumber.
+// This function should take between 2 and 4 numbers as its parameters and return the smallest number.
+// Use the correct Math method.
+
+function findSmallestNumber(one,two,three,four) {
+   let smallest 
+   if (three === undefined) {
+      smallest = Math.min(one,two)
+   } else if ( four === undefined) {
+      smallest = Math.min(one,two,three)
+   } else {
+      smallest = Math.min(one,two,three,four)
+   }
+   return smallest
+   }
+
+findSmallestNumber(2,71,5,3.9)
+findSmallestNumber(20,80,-5.5)	
+findSmallestNumber(8,1)
