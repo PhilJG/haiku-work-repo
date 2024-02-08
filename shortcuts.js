@@ -114,17 +114,27 @@
 // console.log(divide(10,2));
 // console.log(divide(18,3));
 
-const checkPositive = (n) => {
-    return n >= 0 ? true : false
+// const checkPositive = (n) => {
+//     return n >= 0 ? true : false
+// }
+
+// console.log(
+//     checkPositive(20)	// true
+// );
+
+// console.log(
+
+//     checkPositive(-5)	// false
+// );
+
+//////////////////////
+// Concatenation to Template Literal
+// Convert the following String Concatenation into a Template Literal.
+
+function greet(age, city) {
+    return `Hello, I'm ${age} years old and I'm from ${city}!`
 }
 
-console.log(
-    checkPositive(20)	// true
-);
-
-console.log(
-
-    checkPositive(-5)	// false
-);
+console.log(greet(20,'Tokyo'));
 
 
