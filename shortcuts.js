@@ -109,3 +109,10 @@
 // console.log(multiply(10,2)	);
 // console.log(multiply(9,3)	);
 
+// const divide = (a, b) =>  a / b 
+
+// console.log(divide(10,2));
+// console.log(divide(18,3));
+
+
+
