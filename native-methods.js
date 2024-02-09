@@ -92,14 +92,32 @@
 // Return String Length
 // Create a returnLength function that takes a parameter and returns its length if it's a string. In any other case it returns the type of the parameter.
 
-function returnLength(x) {
-   return typeof x === 'string' ? x.length : typeof x
+// function returnLength(x) {
+//    return typeof x === 'string' ? x.length : typeof x
+// }
+
+// console.log(
+//     returnLength('hello'),	// 5
+//     returnLength(''),	// 0
+//     returnLength(10),	// 'number'
+//     returnLength([1,2,3]),	// 'object'
+//     returnLength(true),	// 'boolean'
+//     );
+
+////////////////
+// Is Longer Than
+// Create a JavaScript function called isLongerThan.
+// This function should take two parameters: a string and a number.
+// It should return true if the length of the string is greater than the given number, and false otherwise.
+
+function isLongerThan(string, num) {
+    return string.length > num ? true : false
 }
 
+// test	expected
 console.log(
-    returnLength('hello'),	// 5
-    returnLength(''),	// 0
-    returnLength(10),	// 'number'
-    returnLength([1,2,3]),	// 'object'
-    returnLength(true),	// 'boolean'
+    isLongerThan('hello',3), //true
+    isLongerThan('hello',5), //false
+    isLongerThan('',1), //false
+    isLongerThan('',0), //false
     );
