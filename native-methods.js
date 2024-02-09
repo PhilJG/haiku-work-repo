@@ -161,20 +161,52 @@
 // Flip the String
 // Create a function flipString that takes a string and returns the string flipped.
 
-function flipString(string) {
-    let stringLength = string.length
+// function flipString(string) {
+//     let stringLength = string.length
+//     let result = []
+//     for(let i = 0; i < stringLength; i++){
+//         let l = string.charAt(i)
+//         result.push(l)        
+//     }
+//         result.reverse()
+//         result = result.join('')
+//         return result
+// }
+
+// console.log(
+//     flipString('Hello'),	//'olleH'
+//     flipString(''),	//''
+//     flipString('Haiku Academy')	//'ymedacA ukiaH'
+//     );
+
+////////////////////////////
+// Format Phone Number
+// A list of phone numbers was entered in the database as plain numbers, without proper formatting.
+// Create a function formatPhoneNumber that takes a 12 digit number and formats it according to the tests.
+// Assume the phone numbers never start with a zero.
+// If the number is not a number, if it's falsy or if it's not 12 digits, return the error message.
+
+function formatPhoneNumber(num) {
+    num = String(num)
+    let length = num.length
     let result = []
-    for(let i = 0; i < stringLength; i++){
-        let l = string.charAt(i)
-        result.push(l)        
+    if (length != 12 || num === null){
+        return 'invalid number'
+    } else {
+   for(let i = 0; i < length; i = i++){
+       let c = num.slice(i, i+=3)
+       result.push(c)
+       console.log(result);
     }
-        result.reverse()
-        result = result.join('')
-        return result
+    return result.join('-')
+    }
 }
 
 console.log(
-    flipString('Hello'),	//'olleH'
-    flipString(''),	//''
-    flipString('Haiku Academy')	//'ymedacA ukiaH'
+    formatPhoneNumber(123456789012),	// '123-456-789-012'
+    formatPhoneNumber(123),	// 'invalid number'
+    formatPhoneNumber(999999999999),	// '999-999-999-999'
+    formatPhoneNumber(783543777241),	// '783-543-777-241'
+    formatPhoneNumber(null),	// 'invalid number'
     );
+
