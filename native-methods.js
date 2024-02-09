@@ -156,3 +156,25 @@
 // search(['hello world','good morning'],'world'),	//'hello world'
 // search(['123456','911'],'9'),	//'911'
 // );
+
+//////////////////
+// Flip the String
+// Create a function flipString that takes a string and returns the string flipped.
+
+function flipString(string) {
+    let stringLength = string.length
+    let result = []
+    for(let i = 0; i < stringLength; i++){
+        let l = string.charAt(i)
+        result.push(l)        
+    }
+        result.reverse()
+        result = result.join('')
+        return result
+}
+
+console.log(
+    flipString('Hello'),	//'olleH'
+    flipString(''),	//''
+    flipString('Haiku Academy')	//'ymedacA ukiaH'
+    );
