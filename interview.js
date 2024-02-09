@@ -79,32 +79,3 @@
 //     // [100,'a','b',50]
 //     );
 
-////////////////
-// String Repeat
-// Create a function stringRepeat that takes a number and a string, then returns the string repeated as many times as the number.
-
-// function stringRepeat(num, string) {
-//     let arr = []    
-//     for(let i = 0; i < num; i++){
-//         arr.push(string)
-//     };
-//     let s = arr.join('')
-//     return s
-// }
-
-// console.log(
-//     stringRepeat(5, 'hi'), // 'hihihihihi'
-//     stringRepeat(2, 'hola') // 'holahola'
-// );
-
-////////////////
-// Reverse Array
-// Create a function reverseArray that takes an array and returns the array reversed.
-// function reverseArray(arr) {
-//     arr.reverse()
-//     return arr
-// }
-
-
-// reverseArray([1,2,3,4])	// [4,3,2,1]
-// reverseArray(['a','b','c'])	// ['c','b','a']

@@ -43,10 +43,63 @@
 //     );
 // //[{'name':'John','sports':['football'],'sportsLength':1},{'name':'Alice','sports':['tennis','golf'],'sportsLength':2}]
 
-Reverse Array
-Create a function reverseArray that takes an array and returns the array reversed.
+//////////////////
+// Reverse Array
+// Create a function reverseArray that takes an array and returns the array reversed.
+
+// function reverseArray(arr) {
+//     arr.rreverse()
+// }
+
+// console.log(
+//     reverseArray([1,2,3,4])	// [4,3,2,1]
+//     );
+// console.log(
+//     reverseArray(['a','b','c'])	// ['c','b','a']
+//     );
+
+////////////////
+// String Repeat
+// Create a function stringRepeat that takes a number and a string, then returns the string repeated as many times as the number.
+
+// function stringRepeat(num, string) {
+//     let arr = []    
+//     for(let i = 0; i < num; i++){
+//         arr.push(string)
+//     };
+//     let s = arr.join('')
+//     return s
+// }
+
+// console.log(
+//     stringRepeat(5, 'hi'), // 'hihihihihi'
+//     stringRepeat(2, 'hola') // 'holahola'
+// );
+
+////////////////
+// Reverse Array
+// Create a function reverseArray that takes an array and returns the array reversed.
+// function reverseArray(arr) {
+//     arr.reverse()
+//     return arr
+// }
 
 
-test	expected
-reverseArray([1,2,3,4])	[4,3,2,1]
-reverseArray(['a','b','c'])	['c','b','a']
+// reverseArray([1,2,3,4])	// [4,3,2,1]
+// reverseArray(['a','b','c'])	// ['c','b','a']
+
+// //////////////
+// Return String Length
+// Create a returnLength function that takes a parameter and returns its length if it's a string. In any other case it returns the type of the parameter.
+
+function returnLength(x) {
+   return typeof x === 'string' ? x.length : typeof x
+}
+
+console.log(
+    returnLength('hello'),	// 5
+    returnLength(''),	// 0
+    returnLength(10),	// 'number'
+    returnLength([1,2,3]),	// 'object'
+    returnLength(true),	// 'boolean'
+    );
