@@ -25,20 +25,28 @@
 // Each object contains an array of sports.
 // The function should add a property sportsLength to each object, with the length of its sports array.
 
-function addSportsLengths(arr) {
-    for (let player of arr) {
-         player.sportsLength = player.sports.length
-    }
-   return arr
-}
+// function addSportsLengths(arr) {
+//     for (let player of arr) {
+//          player.sportsLength = player.sports.length
+//     }
+//    return arr
+// }
 
-// test	expected
-console.log(
-    addSportsLengths([{'name':'Bob','sports':[]}])	
-    );
-//[{'name':'Bob','sports':[],'sportsLength':0}]
+// // test	expected
+// console.log(
+//     addSportsLengths([{'name':'Bob','sports':[]}])	
+//     );
+// //[{'name':'Bob','sports':[],'sportsLength':0}]
 
-console.log(
-    addSportsLengths([{'name':'John','sports':['football']},{'name':'Alice','sports':['tennis','golf']}])
-    );
-//[{'name':'John','sports':['football'],'sportsLength':1},{'name':'Alice','sports':['tennis','golf'],'sportsLength':2}]
+// console.log(
+//     addSportsLengths([{'name':'John','sports':['football']},{'name':'Alice','sports':['tennis','golf']}])
+//     );
+// //[{'name':'John','sports':['football'],'sportsLength':1},{'name':'Alice','sports':['tennis','golf'],'sportsLength':2}]
+
+Reverse Array
+Create a function reverseArray that takes an array and returns the array reversed.
+
+
+test	expected
+reverseArray([1,2,3,4])	[4,3,2,1]
+reverseArray(['a','b','c'])	['c','b','a']
