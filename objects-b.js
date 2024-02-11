@@ -327,16 +327,36 @@
 // If the square root is correct, add a property correct with a value of true to the object, otherwise false.
 // The function should then return the array of objects with their new correct field.
 
-function checkSquareRoot(arr) {
-   for (let num of arr) {
-      if (Math.sqrt(num.value) === num.squareRoot){
-         num.correct = true
-      } else {
-         num.correct = false
-      }
+// function checkSquareRoot(arr) {
+//    for (let num of arr) {
+//       if (Math.sqrt(num.value) === num.squareRoot){
+//          num.correct = true
+//       } else {
+//          num.correct = false
+//       }
+//    }   
+//    return arr
+// }
+
+// checkSquareRoot([{'value':100,'squareRoot':10},{'value':25,'squareRoot':6}])
+// // [{'value':100,'squareRoot':10,'correct':true},{'value':25,'squareRoot':6,'correct':false}]
+
+// checkSquareRoot([{'value':81,'squareRoot':9}])	
+// // [{'value':81,'squareRoot':9,'correct':true}]
+
+///////////////////////
+// Win the lottery
+//////////////////////
+
+// Create a function winTheLottery that takes an array of 4 strings, as per the tests below.
+// The function should generate a random number between 0 and 4 which will be used to extract one of the strings from the array.
+// The functions should then return the extracted string.
+
+function winTheLottery(arr) {
+   for (let output of arr) {
+      let index = Math.floor(Math.random() * 4)      
+      output[index]      
    }
-   console.log(arr);
-   
    return arr
 }
 
