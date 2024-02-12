@@ -235,12 +235,55 @@
 // This function will take an array of numbers and check if the array contains any number greater than a specified value.
 // The function should use the some() method to perform this check and return true if such a number exists, or false otherwise.
 
+// function containsHighValue(arr, num) {
+//     arr.some(n => n > num)
+// }
 
-console.log(
+// console.log(
 
-    containsHighValue([1,2,3,4,5],4),	//true
-    containsHighValue([10,100,1000],55),	//true
-    containsHighValue([10,100,1000],2000),	//false
-    containsHighValue([1,2,3],10),	//false
+//     containsHighValue([1,2,3,4,5],4),	//true
+//     containsHighValue([10,100,1000],55),	//true
+//     containsHighValue([10,100,1000],2000),	//false
+//     containsHighValue([1,2,3],10),	//false
     
-)
+// )
+
+//////////////////////////////////
+// Check And Transform
+// Create a JavaScript function named checkAndTransform.
+// This function will take two parameters: an array of numbers and a threshold value.
+// First, it should check if any number in the array is greater than the threshold.
+// If such a number exists, then use the map() method to double each number in the array.
+// The function should return the transformed array if there's a number greater than the threshold, or the original array otherwise.
+
+// function checkAndTransform(arr, threshold) {
+//    let check = arr.some(n => n > threshold)
+//    if(check) {
+//     return arr.map(n => n * 2)
+//    } else {
+//     return arr
+//    }
+// }
+
+// console.log(
+//     checkAndTransform([1,4,6,8],5), //	[2,8,12,16]
+//     checkAndTransform([2,3,4],10), //	[2,3,4]
+
+// )
+
+//////////////////////////////////
+// All Pass
+// Create a JavaScript function named allPass.
+// This function will take two parameters: an array of students scores and a numerical threshold.
+// It should check whether all numbers in the array are greater than the given threshold (all students have passed the exam).
+// The function should return true if all numbers meet this criterion, or false otherwise.
+// function allPass(array,threshold) {
+//     return array.every(num => num > threshold)
+// }
+
+// console.log(
+//     allPass([7,8,8,6,10],5), //	true
+//     allPass([7,8,8,2],5), //	false
+//     allPass([10,7,8,10,10,9],5), //	true
+
+// )
