@@ -10,9 +10,18 @@
 
 
 
-const search = () => {
-        async function getMessages(){
-            let messages = await getMessages()
-            return messages
-    }
-}
+// const search = () => {
+//         async function getMessages(){
+//             let messages = await getMessages()
+//             return messages
+//     }
+// }
+
+////////////////////////////
+// Fix the function
+// The following function is wrong, fix it.
+
+// const filterArray = async ()  => {
+//   let data = await getData()
+//   return data
+// }
