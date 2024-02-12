@@ -375,3 +375,16 @@
 //     sortNumbers([6,5,4,1,2,3]),	//[1,2,3,4,5,6]
 //     sortNumbers([20,100,-20,0]),	//[-20,0,20,100]
 // )
+
+//////////////////////////////////
+// Sort Names
+// Create a sortNames function that takes an array of strings (names) and returns the array sorted alphabetically.
+
+// function sortNames(names) {
+//     return names.sort()
+// }
+
+// console.log(
+//     sortNames(['Bob','Alice','David']),	//['Alice','Bob','David']
+//     sortNames(['Xenia','Xander','Xavia']),	//['Xander','Xavia','Xenia']
+// )
