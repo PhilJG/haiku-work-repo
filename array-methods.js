@@ -94,12 +94,33 @@
 // Write a JavaScript function named filterOutNegativeNumbers.
 // This function should take an array of numbers and return a new array with all negative numbers filtered out, leaving only positive numbers and zeros.
 
-function filterOutNegativeNumbers(arr) {
-    return arr.filter(number => number >= 0)
+// function filterOutNegativeNumbers(arr) {
+//     return arr.filter(number => number >= 0)
+// }
+
+// console.log(
+//     filterOutNegativeNumbers([1,2,3]),	//[1,2,3]
+//     filterOutNegativeNumbers([1,-2,-3,4]),	//[1,4]
+//     filterOutNegativeNumbers([-10,-20,-30,-40]),	//[]
+//     );
+
+/////////////////////
+// Long Strings Bug
+// You are given a function that is intended to return an array of strings that are longer than 4 characters.
+// However, there's a mistake in the implementation of the filter() method.
+// Your task is to identify and correct the error in the function.
+
+function getLongStrings(strings) {
+    return strings.filter(string => {
+        if (string.length > 4)
+    })
 }
 
+
+
+
 console.log(
-    filterOutNegativeNumbers([1,2,3]),	//[1,2,3]
-    filterOutNegativeNumbers([1,-2,-3,4]),	//[1,4]
-    filterOutNegativeNumbers([-10,-20,-30,-40]),	//[]
-    );
+    getLongStrings(['Hello','Hola','Ciao']),	// ['Hello']
+    getLongStrings(['Grazie','Merci','Tak']),	// ['Grazie','Merci']
+    getLongStrings(['Grazie','Merci','Tak','Kop Khun']),	// ['Grazie','Merci','Kop Khun']
+);
