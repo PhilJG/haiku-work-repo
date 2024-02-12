@@ -287,3 +287,63 @@
 //     allPass([10,7,8,10,10,9],5), //	true
 
 // )
+
+//////////////////////////////////
+// Search Houses
+// Create a JavaScript function called searchHouses.
+// This function should take 3 parameters: an array of houses (objects, each having an id, a price and a location), a number (price) and a string (location).
+// It should return true of all the houses contain the location string in the name of their location and if they all below the price; otherwise return false.
+
+// function searchHouses(array, price, location) {
+//     return array.every(house => house.location.includes(location) && house.price < price)
+// }
+
+// console.log(
+//     searchHouses([{'price':100,'location':'Koh Phangan'},{'price':50,'location':'Koh Samui'}],150,'Koh'),   //	true
+//     searchHouses([{'price':100,'location':'Koh Phangan'},{'price':50,'location':'Koh Samui'}],150,'Bali'),  //	false
+//     searchHouses([{'price':100,'location':'Koh Phangan'},{'price':50,'location':'Koh Samui'}],90,'Koh'),    //	false
+//     searchHouses([{'price':100,'location':'Bali'},{'price':80,'location':'Koh Samui'}],90,'Bali'),  //	false
+
+// )
+
+//////////////////////////////////
+// Refactoring Reduce
+// You are provided with a function that takes an array of numbers and calculates the sum of all the numbers.
+// Currently, the function uses a for loop to accomplish this.
+// Your task is to refactor this function to use the reduce() method instead, to make the code more concise and functional.
+
+// function sumNumbers(numbers) {
+//     let sum = 0
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i]
+//     }
+//     return sum
+// }
+
+// function sumNumbers(numbers) {
+//     return numbers.reduce((acc, num) => acc += num)
+// }
+
+// console.log(
+//     sumNumbers([1,2,3,4,5]),	//15
+//     sumNumbers([10,10]),	//20
+//     sumNumbers([-5,-3,8]),	//0
+
+// )
+
+//////////////////////////////////
+// Sum of Even Numbers
+// Create a JavaScript function named sumOfEvenNumbers.
+// This function will take an array of numbers as its input.
+// It should first use the filter() method to keep only the even numbers from the array.
+// Then, use the reduce() method to calculate and return the sum of these even numbers.
+
+
+
+
+
+console.log(
+    sumOfEvenNumbers([1,2,3,4,5,6]),	//12
+    sumNumbers([20,1,20,1]),	//40
+
+)
