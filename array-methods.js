@@ -26,3 +26,20 @@
 //     doubleNumbers([0,100]),	// [0,200]
 //     doubleNumbers([]),	// []
 //     );
+
+/////////////////
+// To Fahrenheit
+// Create a JavaScript function named convertToFahrenheit.
+// This function will take an array of temperatures in Celsius and return a new array with these temperatures converted to Fahrenheit.
+// The conversion formula to use is Fahrenheit = Celsius * 9 / 5 + 32.
+// Use the map method.
+
+function convertToFahrenheit(arr){
+   let f = arr.map(c => c * 9 / 5 + 32)
+   return f
+}
+
+console.log(
+    convertToFahrenheit([15,40,12,5]),	// [59,104,53.6,41]
+    convertToFahrenheit([42,0,-10]),	// [107.6,32,14]
+    );
