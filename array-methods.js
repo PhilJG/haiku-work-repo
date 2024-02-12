@@ -110,17 +110,27 @@
 // However, there's a mistake in the implementation of the filter() method.
 // Your task is to identify and correct the error in the function.
 
-function getLongStrings(strings) {
-    return strings.filter(string => {
-        if (string.length > 4)
-    })
-}
+// function getLongStrings(strings) {
+//     return strings.filter(string => string.length > 4)
+//     }
 
+// console.log(
+//     getLongStrings(['Hello','Hola','Ciao']),	// ['Hello']
+//     getLongStrings(['Grazie','Merci','Tak']),	// ['Grazie','Merci']
+//     getLongStrings(['Grazie','Merci','Tak','Kop Khun']),	// ['Grazie','Merci','Kop Khun']
+// );
 
+//////////////////////////////////
+// Filter and Square Evens
+// Create a JavaScript function named filterAndSquareEvens. This function should take an array of numbers as its input. It should first filter out all odd numbers, and then square each of the remaining even numbers. The function should return a new array with these squared even numbers.
+// function filterAndSquareEvens(arr) {
+//     let even = arr.filter(number => number % 2 === 0)
+//     return even.map(number => number * number )
+// }
 
+// console.log(
+//     filterAndSquareEvens([1,2,3,4,5,6]),	//[4,16,36]
+//     filterAndSquareEvens([10,-10,20,-20]),	//[100,100,400,400]
+//     filterAndSquareEvens([0,11,22,0]),	//[0,484,0]
 
-console.log(
-    getLongStrings(['Hello','Hola','Ciao']),	// ['Hello']
-    getLongStrings(['Grazie','Merci','Tak']),	// ['Grazie','Merci']
-    getLongStrings(['Grazie','Merci','Tak','Kop Khun']),	// ['Grazie','Merci','Kop Khun']
-);
+// )
