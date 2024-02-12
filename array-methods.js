@@ -192,16 +192,55 @@
 //     })
 // }
 
-function findUserByUsername(users, username) {
-    reurn users.find(user => {
-               return user.username === username
-            })
-}
+// function findUserByUsername(users, username) {
+//     return users.find(user => {
+//                return user.username === username
+//             })
+// }
+
+// console.log(
+//     findUserByUsername([{'username':'spiderman','password':'web'},{'username':'batman','password':'dark'}],'batman'), 
+//         //	{'username':'batman','password':'dark'}
+//     findUserByUsername([{'username':'wonderwoman','password':'amazon'},{'username':'superman','password':'krypto'}],'wonderwoman'), 
+//     //	{'username':'wonderwoman','password':'amazon'}
+
+// )
+
+//////////////////////////////////
+// Replace Product Price
+// Write a JavaScript function named replaceProductPrice.
+// This function should take two parameters: an array of product objects and a product ID.
+// Each product object contains an id, a name, and a price.
+// The function should find the product with the given ID and increase its price by 10%.
+// The function should return a new array with the updated product objects.
+
+// function replaceProductPrice(array, id) {
+//     let newDiscount = array.find(product => product.id === id )
+//     newDiscount.price *= 1.1
+//     newDiscount.price = Math.floor(newDiscount.price)    
+//     return array
+// }
+
+// console.log(
+//     replaceProductPrice([{'id':1,'price':100},{'id':2,'price':200}],1),
+//     //	[{'id':1,'price':110},{'id':2,'price':200}]
+//     // replaceProductPrice([{'id':1,'price':100},{'id':2,'price':200}],2),
+//     // //	[{'id':1,'price':100},{'id':2,'price':220}]
+
+// )
+
+//////////////////////////////////
+// Contains High Value
+// Create a function called containsHighValue.
+// This function will take an array of numbers and check if the array contains any number greater than a specified value.
+// The function should use the some() method to perform this check and return true if such a number exists, or false otherwise.
+
 
 console.log(
-    findUserByUsername([{'username':'spiderman','password':'web'},{'username':'batman','password':'dark'}],'batman'), 
-        //	{'username':'batman','password':'dark'}
-    findUserByUsername([{'username':'wonderwoman','password':'amazon'},{'username':'superman','password':'krypto'}],'wonderwoman'), 
-    //	{'username':'wonderwoman','password':'amazon'}
 
+    containsHighValue([1,2,3,4,5],4),	//true
+    containsHighValue([10,100,1000],55),	//true
+    containsHighValue([10,100,1000],2000),	//false
+    containsHighValue([1,2,3],10),	//false
+    
 )
