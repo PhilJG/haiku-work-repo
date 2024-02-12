@@ -338,12 +338,40 @@
 // It should first use the filter() method to keep only the even numbers from the array.
 // Then, use the reduce() method to calculate and return the sum of these even numbers.
 
+// function sumOfEvenNumbers(arr) {
+//     return arr.filter(num => num % 2 === 0).reduce((acc, value) => acc += value)
+// }
 
+// console.log(
+//     sumOfEvenNumbers([1,2,3,4,5,6]),	//12
+//     sumOfEvenNumbers([20,1,20,1]),	//40
 
+// )
 
+//////////////////////////////////
+// Refactor Sort
+// You are given a function that takes an array of numbers and returns a new array with the numbers sorted in ascending order.
+// The current implementation sorts the array using a for loop.
+// Your task is to refactor this function to use the sort() method instead, for a more efficient and idiomatic approach.
 
-console.log(
-    sumOfEvenNumbers([1,2,3,4,5,6]),	//12
-    sumNumbers([20,1,20,1]),	//40
+// function sortNumbers(numbers) {
+//     for (let i = 0; i < numbers.length; i++) {
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             if (numbers[i] > numbers[j]) {
+//                 let temp = numbers[i];
+//                 numbers[i] = numbers[j];
+//                 numbers[j] = temp;
+//             }
+//         }
+//     }
+//     return numbers;
+// }
 
-)
+// function sortNumbers(numbers) {
+//     return numbers.sort((a, b) => a - b)
+// }
+
+// console.log(
+//     sortNumbers([6,5,4,1,2,3]),	//[1,2,3,4,5,6]
+//     sortNumbers([20,100,-20,0]),	//[-20,0,20,100]
+// )
