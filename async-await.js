@@ -25,3 +25,17 @@
 //   let data = await getData()
 //   return data
 // }
+
+//////////////////////////////////
+// Collect the error
+// The function getResults() returns an error. Collect the error and log it in the console.
+
+const search = async () => {
+  try {
+      await getResults()
+  } catch (err) {
+    console.log(`Try harder ${err}`);
+  }
+}
+
+search()
