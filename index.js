@@ -27,8 +27,10 @@
 import axios from "axios";
 
 const getData = async () => {
-    let response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    return response.data
-}
+  let response = await axios.get(
+    "https://jsonplaceholder.typicode.com/todos/1",
+  );
+  return response.data;
+};
 
 console.log(await getData());
