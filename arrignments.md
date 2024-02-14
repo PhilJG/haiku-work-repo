@@ -39,3 +39,10 @@ Within your project, install the lodash package
 Check that the files have been added to the node_modules folder and that lodash is now listed in package.json
 Practice uninstalling the package once, then install it again
 Commit and push
+
+## Use Lodash
+Visit https://lodash.com/docs/4.17.15 and read about some of the methods available in Lodash
+In the index.js file, import the lodash package (or just some of its methods) and use it to experiment with arrays
+Add node_modules to the .gitignore file
+Commit and push
+Paste the entire content of the index.js file here and submit (this will help your team lead guide you)
