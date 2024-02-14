@@ -46,3 +46,11 @@ In the index.js file, import the lodash package (or just some of its methods) an
 Add node_modules to the .gitignore file
 Commit and push
 Paste the entire content of the index.js file here and submit (this will help your team lead guide you)
+
+## Use Axios
+Install the axios package
+Import it in the index.js file
+Use axios to get data from the url "https://jsonplaceholder.typicode.com/todos/1" as you did earlier in the online simulator
+Test that you're receiving data (log it)
+Commit and push
+Paste the entire content of the index.js file here and submit (this will help your team lead guide you)

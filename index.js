@@ -14,12 +14,21 @@
 //     calcCircleArea(5, pi) // 78.5
 //     );
 
-import lodash from "lodash"
+// import lodash from "lodash"
 
-let array1 = ['a', 'b', 'c', 'd']
-let array2 = ["e", "f", "g"]
+// let array1 = ['a', 'b', 'c', 'd']
+// let array2 = ["e", "f", "g"]
 
-console.log(
-    array1.concat(array2),
-    array2.fill("*")
-);
+// console.log(
+//     array1.concat(array2),
+//     array2.fill("*")
+// );
+
+import axios from "axios";
+
+const getData = async () => {
+    let response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    return response.data
+}
+
+console.log(await getData());
