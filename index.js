@@ -1,7 +1,7 @@
 import express from 'express'
-const app = express()
-
 import userRoutes from './userRoutes.js'
+
+const app = express()
 
 app.use(userRoutes)
 
